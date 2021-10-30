@@ -548,7 +548,7 @@ document.body.removeChild(link);
             for(var i=0;i<div_main.children.length;i++)
         {
             console.log(i,div_main.children[i].children[3].innerText,val);
-            if(div_main.children[i].children[3].innerText.match(val))
+            if(div_main.children[i].children[3].innerText.match(val)!=null)
             {
                 //console.log(true);
                 div_main.children[i].style.display="grid";
