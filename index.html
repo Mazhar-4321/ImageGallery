@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/glacial-indifference" type="text/css"/>
+    <title>Document</title>
+    <style>
+        input
+        {
+            margin-top:50px;
+            margin-left:50px;
+            padding:10px;
+            width:250px;
+            background-color: transparent;
+            
+            color: white;
+            
+        }
+        *
+        {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Glacial Indifference', sans-serif;;
+        }
+        body
+        {
+           overflow-x: hidden;
+            background-color: #D77E5E;
+        }
+        .Header
+        {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items:center;
+            
+        }
+        .Header1
+        {
+            font-size:42px;
+            color:white;
+            font-weight: bolder;
+            margin-top: 50px;
+        }
+        .Header2
+        {
+            font-size:25px;
+            color:white;
+            font-weight: bold;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        /* div
+        {
+            cursor: pointer;
+        } */
+      #din
+      {
+           width:100vw;
+         
+         
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+           flex-wrap: wrap;
+           
+          /* grid-template-columns: repeat(auto-fill,minmax(30rem,1fr));
+          grid-auto-flow: dense;
+         grid-column-gap: 50px;
+         grid-row-gap: 50px;
+         grid-column-start: auto;
+         grid-row-start: auto;
+         grid-row-end: auto;
+         grid-column-end: auto; */
+      
+         
+           /* text-align: center; 
+         
+           justify-content: center;
+           align-items: center; */
+           
+         
+         
+        }
+        #pappu
+        {
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+        }
+        #div1-div3
+        {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        #kkkk
+        {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .h:hover
+        {
+            background-color: tomato;
+        }
+        #din #kkkk button:hover
+        {
+            background-color: tomato;
+        }
+        button
+        {
+            width:50px;
+            height: 50px;
+            cursor: pointer;
+            visibility: visible;
+            background-color: transparent;
+            border: 0%;
+        border-radius: 0%;
+        border-color: transparent;
+        }
+        
+    </style>
+    <script>
+        var div_main;
+       window.onload=()=>
+       {
+           div_main=document.getElementById("din");
+           for(var i=0;i<8;i++)
+           {
+               createImage(i);
+           }
+    //  var div1=document.getElementById("din");
+    // // div1.id="div1";
+    //  var div2=document.createElement("div");
+    //  div2.id="div1-div2";
+    //  var button = document.createElement("button");
+    //  button.innerText="logo";
+    //  button.style="color:white;visibility:hidden";
+    //  button.innerHTML=`<i class="fas fa-search fa-2x"></i>`;
+    //  var button1 = document.createElement("button");
+    //  button1.innerHTML=`<i  class="fas fa-download fa-2x"></i>`;
+     
+    //  button1.style= "border-radius:100%;color:white;visibility:hidden";
+    //  button.onclick=()=>
+    //  {
+    //     console.log("b");
+    //     div1.style.transform="scale(1.2)"
+    //    // div1.style.transition="all .5";
+    //     //myVar = setInterval(alertFunc, 3000);
+    //    // div1.style.transform="none";
+    //  }
+    //  button.onmouseout=()=>
+    //  {
+    //     console.log("b");
+    //     div1.style.transform="scale(1)"
+    //    // div1.style.transition="all .5";
+    //     //myVar = setInterval(alertFunc, 3000);
+    //    // div1.style.transform="none";
+    //  }
+    //  button1.onclick=()=>
+    //  {
+    //     console.log("b1")
+    //  }
+    //  div2.appendChild(button);
+    //  div2.appendChild(button1);
+    //  div2.style="display:grid;grid-template-columns:9fr 1fr;"
+    //  var div3=document.createElement("div");
+    //  div3.id="pappu";
+    //  var div31=document.createElement("div");
+     
+    //  var div32=document.createElement("div");
+    //  div32.id="3-2"
+    //  var b_div32=document.createElement("button");
+     
+    //  b_div32.innerHTML=`<i class="fas fa-book-open fa-2x"></i>`;
+    //  div32.style.padding="10px 10px 20px 20px";
+    //  b_div32.style="width:100px;height:50px;text-alignment:center;color:white;visibility:hidden";
+    //  div32.appendChild(b_div32);
+    //  var div33=document.createElement("div");
+    
+    //  div31.onmouseover=(event)=>
+    //  {
+    //    button.style.visibility="visible";
+    //    button1.style.visibility="visible";
+    //  }
+    //  div32.onmouseover=(event)=>
+    //  {
+    //     b_div32.style.visibility="visible";
+    //  }
+    //  div33.onmouseover=(event)=>
+    //  {
+    //     button.style.visibility="visible";
+    //    button1.style.visibility="visible";
+    //  }
+    //  div31.onmouseout=(event)=>
+    //  {
+    //     button.style.visibility="hidden";
+    //    button1.style.visibility="hidden";
+    //  }
+    //  div32.onmouseout=(event)=>
+    //  {
+    // //     button.style.visibility="visible";
+    // //    button1.style.visibility="visible";
+    // b_div32.style.visibility="hidden";
+    //  }
+    //  div33.onmouseout=(event)=>
+    //  {
+    //     button.style.visibility="hidden";
+    //    button1.style.visibility="hidden";
+    //  }
+    
+    //  div3.append(div31);
+    //  div3.append(div32);
+    //  div3.append(div33);
+    //  var div4=document.createElement("div");
+    //  div4.id="div1-div4";
+    //  div1.appendChild(div2);
+    //  div1.appendChild(div3);
+    //  div1.appendChild(div4);
+    //  div2.onmouseover=(event)=>
+    //  {
+
+    //     button.style.visibility="visible";
+    //    button1.style.visibility="visible";
+    //     // div1.style="background-color:blue"
+    //  }
+    // //  div3.onmouseover=(event)=>
+    // //  {
+    // //      console.log("div3")
+    // //      div1.style="background-color:yellow"
+    // //  }
+    //  div4.onmouseover=(event)=>
+    //  {
+    //     button.style.visibility="visible";
+    //    button1.style.visibility="visible";
+    //    //  div1.style="background-color:blue"
+    //  }
+    //  div4.onmouseout=(event)=>
+    //  {
+    //     button.style.visibility="hidden";
+    //    button1.style.visibility="hidden";
+    //     // div1.style="background-color:white"
+    //  }
+    // //  div3.onmouseout=(event)=>
+    // //  {
+    // //      console.log("div4")
+    // //      div1.style="background-color:white"
+    // //  }
+    //  div2.onmouseout=(event)=>
+    //  {
+         
+    //     button.style.visibility="hidden";
+    //    button1.style.visibility="hidden";
+    //     // div1.style="background-color:white"
+    //  }
+    //  div2.style="background-color:green"
+    //  div3.style="background-color:orange"
+    //  div4.style="background-color:red"
+    //  div31.style="background-color:black"
+    //  div32.style="background-color:tomato"
+    //  div33.style="background-color:white"
+       }
+          function createImage(i)
+     {
+         
+       // var div1=document.getElementById("din");
+    // div1.id="div1";
+    var divS=document.createElement("div");
+    var div1=document.createElement("div");
+    var divAbove=document.createElement("div");
+    div1.id="div"+i
+    div1.style=`width:290px;
+          background-color: transparent;
+          border: 5px solid #d86f49;
+          border-radius: 1%;
+         margin:20px;
+       
+      
+         
+          height: 300px;
+          display: grid;
+          grid-template-rows: 1fr 1fr 1fr;
+          
+          background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;`;
+  
+    div1.style.backgroundImage="url(image"+i+".png";
+     var div2=document.createElement("div");
+     div2.id="div1-div2";
+     var button = document.createElement("button");
+     button.innerText="logo";
+     button.id="b"
+     button.style="color:white;visibility:hidden";
+     button.innerHTML=`<i class="fas fa-search-plus fa-2x"></i>`;
+     var button1 = document.createElement("button");
+     button1.innerHTML=`<i  class="fas fa-download fa-2x"></i>`;
+     button1.id="b1"+i;
+     button1.style= "border-radius:100%;color:white;visibility:hidden";
+     button.onclick=(event)=>
+     {
+         console.log("scale")
+       //console.log(event.path);
+       // var div_transform=event.path[3];
+       button.style.visibility="hidden";
+        button1.style.visibility="hidden";
+        div1.style.borderColor="transparent"
+        div1.style.animationDuration="2s"
+       // div1.style.backgroundColor="red"
+        div1.style.transform="scale(2.5)"
+        div4.style.color="transparent"
+       // div1.style.border="0px solid black";
+        
+       // div1.style.transition="all .5";
+        //myVar = setInterval(alertFunc, 3000);
+       // div1.style.transform="none";
+     }
+     button.onmouseout=(event)=>
+     {
+       // var div_transform=event.path[3];
+       div1.style.borderColor="#d86f49"
+        div1.style.transform="scale(1)"
+        button.style.visibility="visible";
+        button1.style.visibility="visible";
+        div4.style.color="white"
+        //div1.style.border="1px solid black";
+       // console.log(div_transform)
+       // div1.style.transform="scale(1)"
+       // div1.style.transition="all .5";
+        //myVar = setInterval(alertFunc, 3000);
+       // div1.style.transform="none";
+     }
+   
+     
+     div2.appendChild(button);
+     div2.appendChild(button1);
+     div2.style="display:grid;grid-template-columns:9fr 1fr;"
+     var div3=document.createElement("div");
+     div3.id="pappu";
+     var div31=document.createElement("div");
+     
+     var div32=document.createElement("div");
+     div32.id="3-2"
+     var b_div32=document.createElement("button");
+     
+     b_div32.innerHTML=`<i class="fas fa-book-open fa-2x"></i>`;
+     div32.style.padding="10px 10px 20px 20px";
+     //div32.style.visibility="hidden";
+     b_div32.style="width:100px;height:50px;text-alignment:center;color:white;visibility:hidden";
+    
+     div32.appendChild(b_div32);
+     var div33=document.createElement("div");
+    
+     div31.onmouseover=(event)=>
+     {
+        divS.style.backgroundColor="red"
+        button.style.visibility="visible";
+        button1.style.visibility="visible";
+     //   div4.style.color="white";
+     }
+     div32.onmouseover=(event)=>
+     {
+        divS.style.backgroundColor="red"
+        b_div32.style.visibility="visible";
+        divAbove.style.display="flex";
+        divAbove.style.flexDirection="column";
+        divAbove.style.backgroundColor="#d87649";
+      //  div4.style.color="white";
+      //  divAbove.style.backgroundImage="url(image0.png)"
+        
+     }
+    // div4.style.textAlign="center";
+   
+     div33.onmouseover=(event)=>
+     {
+       // console.log(event);
+       divS.style.backgroundColor="red"
+       button.style.visibility="visible";
+        button1.style.visibility="visible";
+    //     button.style.visibility="visible";
+    //    button1.style.visibility="visible";
+     }
+     div31.onmouseout=(event)=>
+     {
+        button.style.visibility="hidden";
+       button1.style.visibility="hidden";
+     }
+     div32.onmouseout=(event)=>
+     {
+    //     button.style.visibility="visible";
+    //    button1.style.visibility="visible";
+
+    b_div32.style.visibility="hidden";
+     }
+     div33.onmouseout=(event)=>
+     {
+        button.style.visibility="hidden";
+       button1.style.visibility="hidden";
+     }
+    
+     div3.append(div31);
+     div3.append(div32);
+     div3.append(div33);
+     var div4=document.createElement("div");
+     div4.id="div1-div4"+i;
+     div4.innerText="Sample"+i;
+     div4.style.textAlign="center";
+     div4.style.paddingTop="40px";
+     div4.style.color="white";
+     div4.style.fontWeight="bold";
+     var buttonX = document.createElement("button");
+     buttonX.innerText="logo";
+    
+     buttonX.style="color:white;visibility:visible";
+     buttonX.innerHTML=`<i class="fas fa-times fa-2x"></i>`;  
+     buttonX.onclick=(event)=>
+     {
+         divAbove.style.display="none";
+     }  
+     var divAbove_1=document.createElement("div");
+     var divAbove_2=document.createElement("div");
+     divAbove_2.innerText="Here Goes The Description Of the Image"+i;
+     divAbove_2.style.textAlign="center";
+     divAbove_2.style.padding="20px";
+     divAbove_2.style.color="white";
+     divAbove_2.style.fontWeight="bold"
+     divAbove.appendChild(divAbove_1);
+     divAbove.appendChild(divAbove_2);
+     divAbove_1.appendChild(buttonX);
+     //divAbove.style.position="absolute";
+     //divAbove.style.display="none";
+     divAbove_1.style.textAlign="right";
+     divAbove_1.style.justifyContent="end";
+     div1.appendChild(divAbove);
+     div1.appendChild(div2);
+     div1.appendChild(div3);
+     div1.appendChild(div4);
+     //divS.appendChild(div1);
+     divAbove.style.position="absolute";
+     divAbove.style.display="none";
+    //  divAbove.style.textAlign="right";
+    //  divAbove.style.justifyContent="end";
+     var divX=document.createElement("div");
+     
+     divAbove.style.width=div1.style.width;
+     divAbove.style.height=div1.style.height;
+     divAbove.style.backgroundColor="transparent";
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     div_main.appendChild(div1);
+    
+     div2.onmouseover=(event)=>
+     {
+        // console.log(event.path[0].id)
+        button.style.visibility="visible";
+        button1.style.visibility="visible";
+           //  div4.style.color="white";
+         
+     }
+    
+     div4.onmouseover=(event)=>
+     {
+         console.log(event)
+        // console.log(event.path[1].children[0].children[1])
+        button.style.visibility="visible";
+        button1.style.visibility="visible";
+     //   div4.style.color="white";
+       //  div1.style="background-color:blue"
+     }
+     div4.onmouseout=(event)=>
+     {
+        button.style.visibility="hidden";
+        button1.style.visibility="hidden";
+        // div1.style="background-color:white"
+     }
+    
+     div2.onmouseout=(event)=>
+     {
+        button.style.visibility="hidden";
+        button1.style.visibility="hidden";
+     }
+     button1.onclick=(event)=>
+     {
+        var link = document.createElement('a');
+        
+link.href = "image"+i+".png";
+link.download ="image"+i+".png" ;
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
+        console.log("b1");
+        div4.style.color="transparent";
+     }
+
+     }    
+     function take(event)
+       {
+           var imj=document.getElementById("sq");
+           var bounds=imj.getBoundingClientRect();
+           var left=bounds.left;
+    var top=bounds.top;
+    var x = event.pageX - left;
+    var y = event.pageY - top;
+    var cw=imj.clientWidth
+    var ch=imj.clientHeight
+    var iw=imj.naturalWidth
+    var ih=imj.naturalHeight
+    var px=x/cw*iw
+    var py=y/ch*ih
+    if(x-90>=0&&x-90<=20&&y-90>=0&&y-90<=20)
+           console.log(x+" "+y)
+           else
+           {
+               console.log(x+" "+y+"pppp")
+           }
+       }
+    function changeLayout()
+    {
+        var val=document.getElementById("laila").value;
+        //console.log(val.length);
+        if(val.length==0)
+        {
+            for(var i=0;i<div_main.children.length;i++)
+        {
+            div_main.children[i].style.display="grid";
+        }
+        }
+        else
+        {
+            for(var i=0;i<div_main.children.length;i++)
+        {
+            console.log(i,div_main.children[i].children[3].innerText,val);
+            if(div_main.children[i].children[3].innerText.match(val))
+            {
+                //console.log(true);
+                div_main.children[i].style.display="grid";
+            }
+            else
+            {
+                div_main.children[i].style.display="none";
+            }
+        }
+        }
+       
+
+    }
+
+       function take(event)
+       {
+           var imj=document.getElementById("sq");
+           var bounds=imj.getBoundingClientRect();
+           var left=bounds.left;
+    var top=bounds.top;
+    var x = event.pageX - left;
+    var y = event.pageY - top;
+    var cw=imj.clientWidth
+    var ch=imj.clientHeight
+    var iw=imj.naturalWidth
+    var ih=imj.naturalHeight
+    var px=x/cw*iw
+    var py=y/ch*ih
+    if(x-90>=0&&x-90<=20&&y-90>=0&&y-90<=20)
+           console.log(x+" "+y)
+           else
+           {
+               console.log(x+" "+y+"pppp")
+           }
+       }
+    </script>
+</head>
+<body>
+    <div>
+        <input type="text" id="laila" oninput="changeLayout()" placeholder="Enter Image Name To Search">
+    </div>
+    <div class="Header">
+        <p class="Header1">WHAT WE OFFER</p>
+        <P class="Header2">We offer highly recommended products that are specially crafted to nourish and moisturize your beauty</P>
+    </div>
+    <div id="din" >
+        <!-- <div class="h" >ji</div>
+        <div id="kkkk">
+            <div class="h">LL</div>
+        <div class="g">Logo</div>
+        <div class="h">LL</div>
+    </div>
+    
+    <div class="h" >ji</div> -->
+
+    </div>
+</body>
+</html>
