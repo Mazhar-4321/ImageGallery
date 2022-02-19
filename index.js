@@ -94,6 +94,21 @@ function createImage(i)
             event.path[0].visibility="visible";
         }
      }
+     
+     div32.onmouseout=(event)=>
+     {
+        console.log(event.path[0].id=="3-2");
+        if(event.path[1].id=="3-2")
+        {
+        var button=event.path[1].children[0];
+        button.style.visibility="hidden";
+        }
+        else
+        {
+            
+            event.path[0].visibility="hidden";
+        }
+     }
      div33.onmouseover=(event)=>
      {
        // console.log(event);
